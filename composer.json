@@ -1,5 +1,5 @@
 {
-    "name": "metrix/laravel-sortable",
+    "name": "metrix/eloquent-sortable",
     "description": "Sortable trait for Laravel Eloquent models",
     "homepage": "https://github.com/metrix/laravel-sortable",
     "authors": [
