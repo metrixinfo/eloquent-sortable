@@ -1,4 +1,4 @@
-# Sortable behaviour for Eloquent models
+# Sortable Behaviour for Eloquent Models
 
 This package provides a trait that adds sortable behaviour to an Eloquent model.
 
