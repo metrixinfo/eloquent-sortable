@@ -1,7 +1,7 @@
 {
-    "name": "metrix/eloquent-sortable",
-    "description": "Sortable trait for Laravel Eloquent models",
-    "homepage": "https://github.com/metrix/laravel-sortable",
+    "name": "metrixinfo/eloquent-sortable",
+    "description": "Sortable Trait for Laravel Eloquent Models Support Multiple Grouping",
+    "homepage": "https://github.com/metrixinfo/eloquent-sortable",
     "authors": [
         {
             "name": "Michael J. Pawlowsky",
@@ -11,6 +11,7 @@
     "keywords":
         [
             "sort",
+            "order",
             "sortable",
             "eloquent",
             "model",
