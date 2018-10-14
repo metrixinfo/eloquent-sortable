@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ruleset name="PHP_CodeSniffer">
+
+    <description>The coding standard for PHP_CodeSniffer itself.</description>
+
+    <file>.././src</file>
+
+    <exclude-pattern>*/Standards/*/Tests/*.(inc|css|js)</exclude-pattern>
+
+    <arg name="basepath" value=""/>
+    <arg name="colors" />
+    <arg name="parallel" value="75" />
+    <arg value="np"/>
+
+    <!-- Don't hide tokenizer exceptions -->
+    <rule ref="Internal.Tokenizer.Exception">
+        <type>error</type>
+    </rule>
+
+    <!-- All PHP files MUST use the Unix LF (linefeed) line ending. -->
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
+
+    <rule ref="PSR1" />
+    <rule ref="PSR2" />
+
+</ruleset>
