@@ -1,5 +1,7 @@
 # Sortable Behaviour for Eloquent Models
 
+![Build Status](https://travis-ci.org/metrixinfo/eloquent-sortable.svg?branch=master "Build Status")
+
 This package provides a trait that adds sortable behaviour to an Eloquent model.
 
 The value of the order column of a new record of a model is determined by the maximum value of the order column of all or a subset group of records of that model + 1.
