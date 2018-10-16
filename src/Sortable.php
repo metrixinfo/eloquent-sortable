@@ -78,10 +78,10 @@ trait Sortable
                 foreach ($group_column as $field) {
                     $query = $query->orderBy($field, $direction);
                 }
+            } else {
+                // Single Group Column
+                $query->orderBy($group_column, $direction);
             }
-
-            // Single Group Column
-            $query->orderBy($group_column, $direction);
         }
 
         return $query->orderBy($orderColumnName, $direction);

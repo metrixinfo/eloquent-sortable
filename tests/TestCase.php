@@ -2,6 +2,7 @@
 
 namespace Metrix\EloquentSortable\Test;
 
+use Faker\Factory;
 use Illuminate\Database\Schema\Blueprint;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -12,6 +13,11 @@ abstract class TestCase extends Orchestra
 {
 
     /**
+     * @var \Faker\Generator
+     */
+    protected $faker;
+
+    /**
      *  Setup the Tests
      */
     public function setUp()
@@ -19,6 +25,8 @@ abstract class TestCase extends Orchestra
         parent::setUp();
 
         $this->setUpDatabase();
+
+        $this->faker = Factory::create();
     }
 
     /**
@@ -45,6 +53,7 @@ abstract class TestCase extends Orchestra
             $table->increments('id');
             $table->string('name');
             $table->integer('group_id', false, true);
+            $table->integer('user_id', false, true);
             $table->integer('display_order');
         });
 
@@ -53,6 +62,7 @@ abstract class TestCase extends Orchestra
                 'name' => $i,
                 'display_order' => $i,
                 'group_id' => 1,
+                'user_id' => 1,
             ]);
         });
 
@@ -87,6 +97,35 @@ abstract class TestCase extends Orchestra
                 'name' => $i,
                 'display_order' => $i,
                 'group_id' => 3,
+            ]);
+        });
+
+    }
+
+
+    /**
+     *  Add group row to dummy data
+     */
+    protected function setUpMultipleGroups(): void
+    {
+
+        $faker = $this->faker;
+
+        collect(range(1, 20))->each(function (int $i=1) use ($faker) {
+            DummyWithGroups::create([
+                'name' => $i,
+                'display_order' => $i,
+                'group_id' => 2,
+                'user_id' => $faker->numberBetween(2,5),
+            ]);
+        });
+
+        collect(range(1, 20))->each(function (int $i=1) use ($faker){
+            DummyWithGroups::create([
+                'name' => $i,
+                'display_order' => $i,
+                'group_id' => 3,
+                'user_id' => $faker->numberBetween(2,5),
             ]);
         });
 

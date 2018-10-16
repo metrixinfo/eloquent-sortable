@@ -120,7 +120,7 @@ class SortableTest extends TestCase
     /**
      * @test
      */
-    public function it_provides_an_ordered_trait_with_a_single__set_of_grouped_models(): void
+    public function it_provides_an_ordered_trait_with_a_single_set_of_grouped_models(): void
     {
         $this->setUpGroups();
 
@@ -137,10 +137,12 @@ class SortableTest extends TestCase
      */
     public function it_provides_an_ordered_trait_with_multiple_sets_of_grouped_models(): void
     {
-        $this->setUpGroups();
+        $this->setUpMultipleGroups();
 
         $i=1;
         $group_id = 1;
+
+        $all = DummyWithMultipleGroups::ordered()->get();
 
         foreach (DummyWithGroups::ordered()->get() as $order ) {
             $this->assertEquals($i++, $order->display_order);
@@ -472,5 +474,5 @@ class SortableTest extends TestCase
             $counter++;
         }
     }
-    
+
 }
