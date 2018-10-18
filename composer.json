@@ -1,6 +1,6 @@
 {
     "name": "metrixinfo/eloquent-sortable",
-    "description": "Sortable Trait for Laravel Eloquent Models Support Multiple Grouping",
+    "description": "Sortable Trait for Laravel Eloquent models that supports grouping on multiple keys",
     "homepage": "https://github.com/metrixinfo/eloquent-sortable",
     "authors": [
         {
