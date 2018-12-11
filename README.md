@@ -18,7 +18,7 @@ Thank you to [Freek Van der Herten](https://murze.be) for sharing the original p
 This package can be installed through Composer.
 
 ```
-composer require metrix/eloquent-sortable
+composer require metrixinfo/eloquent-sortable
 ```
 
 ## Usage
