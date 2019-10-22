@@ -1,0 +1,14 @@
+Version 0.1.0
+ - Update composer to accept Laravel 5.8
+ - Merge pull request #1 from dorvidas/patch-1
+ - Fix composer require
+ - Update description in composer.json
+ - Fix scope for multiple group by columns
+ - Add Travis build status to README.
+ - Add Travis config
+ - Fix package name and Github  URL
+ - Merge branch 'master' of https://github.com/metrixinfo/eloquent-sortable
+ - Fix package name in composer
+ - Update README.md
+ - Initial Commit
+
