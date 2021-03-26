@@ -1,3 +1,8 @@
+Version 0.8.0:
+ - Merge branch 'master' of https://github.com/metrixinfo/eloquent-sortable
+ - Update for Laravel 8
+ - Update composer.json
+
 Version 0.7.0:
 
 
